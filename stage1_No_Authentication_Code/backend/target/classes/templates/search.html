@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Electricity Bill</title>
+</head>
+<body>
+
+<h2>Search Electricity Bill</h2>
+
+<form th:action="@{/searchBills}" method="get">
+    <label>Customer ID:</label>
+    <input type="number" name="customerId" required>
+
+    <br><br>
+
+    <label>Customer Name:</label>
+    <input type="text" name="name" required>
+
+    <br><br>
+
+    <button type="submit">View Bill</button>
+
+    <p th:if="${error}" th:text="${error}" style="color:red;"></p>
+</form>
+
+
+</body>
+</html>
